@@ -1,0 +1,8 @@
+:host {
+    display: flex;
+    background-color: red;
+}
+
+h2 {
+    color: green
+}

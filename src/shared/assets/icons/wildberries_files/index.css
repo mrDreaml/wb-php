@@ -1,0 +1,137 @@
+.main-header {
+    width: 100%;
+    background: linear-gradient(97.26deg, #ed3cca .49%, #df34d2 14.88%, #d02bd9 29.27%, #bf22e1 43.14%, #ae1ae8 57.02%, #9a10f0 70.89%, #8306f7 84.76%, #7c1af8 99.15%), linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .05));
+    padding: .5em 0 1em;
+    z-index: 1000;
+
+    product-search-input {
+        z-index: 1000;
+    }
+    
+    currency-select {
+        z-index: 1001;
+    }
+
+    animated-button-burger-menu {
+        font-size: 3.625em;
+        flex-shrink: 0;
+    }
+
+    &.main-header__fixed {
+        position: fixed;
+        padding-top: 1em;
+    }
+}
+
+.main-header__container {
+    max-width: 1504px;
+    margin: 0 auto;
+    padding: 0 2em;
+    box-sizing: border-box;
+}
+
+.main-header__top {
+    justify-content: space-between;
+    margin-bottom: .2em;
+    
+    &:not([hidden]) {
+        display: flex;
+      }
+  
+}
+
+.main-header__top-navigation {
+    display: flex;
+
+    >:first-child {
+        width: 300px;
+    }
+
+    .main-header__offers-links {
+        display: flex;
+        gap: .75em;
+    }
+}
+
+.main-header__bottom {
+    display: flex;
+    align-self: center;
+    gap: 1em;
+}
+
+
+.main-header__navigation {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+}
+
+.main-header__link-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color .3s;
+    text-decoration: none;
+
+    &:hover {
+        color: #fff;
+    }
+
+    .main-header__link-icon {
+        height: 1.55em;
+        width: 1.5em;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        margin: 0 auto .6em;
+
+        &.main-header__link-icon-address {
+            background-image: url("/src/shared/assets/icons/address.svg");
+        }
+
+        &.main-header__link-icon-login {
+            background-image: url("/src/shared/assets/icons/profile.svg");
+        }
+
+        &.main-header__link-icon-basket {
+            background-image: url("/src/shared/assets/icons/basket.svg");
+            background-size: 1.5em;
+        }
+    }
+
+}
+
+.main-header__location {
+    display: flex;
+    a {
+        padding: .25em .5em;
+        border-radius: .5em;
+        transition-property: color, background-color;
+        transition-duration: .3s;
+        background-color: rgba(255, 255, 255, 0);
+        display: flex;
+
+        &:hover {
+            color: #fff;
+            background-color: rgba(255, 255, 255, .2);
+        }
+
+        &:before {
+            content: '';
+            width: 1em;
+            height: 1.1em;
+            margin-right: .4em;
+            display: block;
+            background-image: url("/src/shared/assets/icons/location.svg");
+        }
+    }
+}
+
+.main-header__link {
+    color: rgba(255, 255, 255, .6);
+    cursor: pointer;
+    min-height: 1.25em;
+    font-size: .875em;
+    line-height: 1.25em;
+    text-decoration: none;
+    transition: color .3s;
+}

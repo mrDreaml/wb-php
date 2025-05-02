@@ -1,0 +1,10 @@
+main-product-list {
+    display: grid;
+    column-gap: 2em;
+    row-gap: 2em;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: max-content;
+    grid-row: auto;
+    height: 8000px;
+    gap: 2em;
+}

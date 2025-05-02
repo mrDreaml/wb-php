@@ -1,0 +1,12 @@
+promo-banner {
+    .promo-banner__slider {
+        display: block;
+        border-radius: 1em;
+        overflow: hidden;
+
+        .slide-item {
+            border-radius: 1em;
+            overflow: hidden;
+        }
+    }
+}

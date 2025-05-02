@@ -1,0 +1,22 @@
+<svg width="24" height="24" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_139_299)">
+        <mask id="mask0_139_299" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="23" y="13" width="158" height="174">
+            <path d="M164 119.053C178.667 110.585 178.667 89.4152 164 80.9474L62 22.0577C47.3333 13.5899 29 24.1747 29 41.1103L29 158.89C29 175.825 47.3333 186.41 62 177.942L164 119.053Z" stroke="black" stroke-width="12" stroke-linejoin="round"/>
+        </mask>
+        <g mask="url(#mask0_139_299)">
+            <rect width="181.154" height="185.86" transform="translate(24.6494 -1.21045) rotate(11.583)" fill="white"/>
+            <rect width="181.154" height="185.86" transform="translate(24.6494 -1.21045) rotate(11.583)" fill="url(#paint0_linear_139_299)"/>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="paint0_linear_139_299" x1="24.8615" y1="9.98121" x2="202.444" y2="78.9845" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FC4949"/>
+            <stop offset="0.333333" stop-color="#F654BE"/>
+            <stop offset="0.666667" stop-color="#D186F0"/>
+            <stop offset="1" stop-color="#FFC140"/>
+        </linearGradient>
+        <clipPath id="clip0_139_299">
+            <rect width="200" height="200" fill="white"/>
+        </clipPath>
+    </defs>
+</svg>

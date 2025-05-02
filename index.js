@@ -1,0 +1,8 @@
+import './src/components/main-header/index.js'
+import './src/components/animated-button-burger-menu/index.js'
+import './src/components/currency-select/index.js'
+import './src/components/main-menu/index.js'
+import './src/components/product-item/index.js'
+import './src/components/product-search-input/index.js'
+import './src/components/promo-banner/index.js'
+import './src/components/shadow-area/index.js'

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="@/app/ui/assets/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>wildberries</title>
+  <style>
+    html {
+      --active_c: #9855f6;
+    }
+
+    .animation-fade-show {
+      animation: fadeShow .3s;
+    }
+
+    h2 {
+      color: red;
+    }
+
+    @keyframes fadeShow {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .slide-item {
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .big-slider-container {
+      width: 1000px;
+      height: 500px;
+    }
+
+    .navigation-slider__navigate__button__custom {
+      font-size: inherit;
+      position: absolute;
+      background: #000;
+      border: none;
+      width: 80px;
+      height: 100%;
+      padding: .1em;
+      line-height: 0;
+      opacity: .5;
+      transition: opacity .3s;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      svg {
+        position: relative;
+        fill: #000;
+      }
+
+      &.navigation-slider__navigate_button__disabled {
+        opacity: 0;
+      }
+    }
+
+    button[name="navigation-next"].navigation-slider__navigate__button__custom {
+      right: 0;
+
+      svg {
+        fill: #f0f;
+        left: .1em;
+      }
+    }
+
+    button[name="navigation-prev"].navigation-slider__navigate__button__custom {
+      left: 0;
+
+      svg {
+        fill: #f0f;
+        right: .1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <?php
+$var = 'Bob';
+$Var = 'Joe';
+echo "$var, $Var";      // outputs "Bob, Joe"
+
+$_4site = 'not yet';    // valid; starts with an underscore
+$täyte = 'mansikka';    // valid; 'ä' is (Extended) ASCII 228.
+?>
+
+
+  <h1>Navigation Slider Custom Controls</h1>
+  <base-slider width="600" height="341" infinity gap="20" slide-controls>
+    <slider-item class="slide-item">
+      <img src="https://www.shutterstock.com/image-photo/scenic-image-iceland-incredible-nature-600nw-1453557041.jpg"
+        alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item">
+      <img
+        src="https://www.bmw.mu/content/dam/bmw/common/all-models/m-series/series-overview/bmw-m-series-seo-overview-ms-04.jpg"
+        alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item">
+      <img
+        src="https://img.mercedes-benz-kiev.com/data/news/181-mercedes-benz-vision-avtr/181-Mercedes-Benz-vision-avtr-1.jpg"
+        alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlAl2018npa0gAXGNrMU7bY6T1QQxcl2xXKw&s" alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item">
+      <img src="https://avatars.mds.yandex.net/get-verba/1540742/2a0000018f715b68b3fcffcbff4119bac587/456x342" alt="" />
+    </slider-item>
+
+  </base-slider>
+
+  <h1>Base Slider</h1>
+  <base-slider width="600" height="341" infinity>
+    <slider-item class="slide-item">
+      <img src="https://www.shutterstock.com/image-photo/scenic-image-iceland-incredible-nature-600nw-1453557041.jpg"
+        alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item">
+      <img
+        src="https://www.bmw.mu/content/dam/bmw/common/all-models/m-series/series-overview/bmw-m-series-seo-overview-ms-04.jpg"
+        alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item">
+      <img
+        src="https://img.mercedes-benz-kiev.com/data/news/181-mercedes-benz-vision-avtr/181-Mercedes-Benz-vision-avtr-1.jpg"
+        alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlAl2018npa0gAXGNrMU7bY6T1QQxcl2xXKw&s" alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item">
+      <img src="https://avatars.mds.yandex.net/get-verba/1540742/2a0000018f715b68b3fcffcbff4119bac587/456x342" alt="" />
+    </slider-item>
+
+  </base-slider>
+
+  <h1>Base Slider gap</h1>
+  <base-slider width="600" height="341" gap="20">
+    <slider-item class="slide-item" padding="10">
+      <img src="https://www.shutterstock.com/image-photo/scenic-image-iceland-incredible-nature-600nw-1453557041.jpg"
+        alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item" padding="10">
+      <img
+        src="https://www.bmw.mu/content/dam/bmw/common/all-models/m-series/series-overview/bmw-m-series-seo-overview-ms-04.jpg"
+        alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item" padding="10">
+      <img
+        src="https://img.mercedes-benz-kiev.com/data/news/181-mercedes-benz-vision-avtr/181-Mercedes-Benz-vision-avtr-1.jpg"
+        alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item" padding="10">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlAl2018npa0gAXGNrMU7bY6T1QQxcl2xXKw&s" alt="" />
+    </slider-item>
+
+    <slider-item class="slide-item" padding="10">
+      <img src="https://avatars.mds.yandex.net/get-verba/1540742/2a0000018f715b68b3fcffcbff4119bac587/456x342" alt="" />
+    </slider-item>
+
+  </base-slider>
+</body>
+
+</html>
