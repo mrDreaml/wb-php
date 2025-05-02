@@ -1,4 +1,4 @@
-class View extends HTMLElement {
+class MainMenu extends HTMLElement {
   onCalcPosition
   #timer
 
@@ -6,10 +6,6 @@ class View extends HTMLElement {
 
   constructor() {
     super();
-
-    const template = document.getElementById("template-main-menu");
-    this.appendChild(template.content.cloneNode(true));
-
     this.#initListeners();
   }
 
@@ -49,4 +45,4 @@ class View extends HTMLElement {
   }
 }
 
-customElements.define("main-menu", View)
+customElements.define("main-menu", MainMenu)

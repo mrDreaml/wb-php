@@ -1,5 +1,3 @@
-await customElements.whenDefined('shadow-area')
-
 const ShadowArea = document.querySelector('shadow-area')
 
 document.addEventListener('mousedown', e => {
@@ -8,6 +6,5 @@ document.addEventListener('mousedown', e => {
     const isBurgerMenuButton = Boolean(e.target.closest('animated-button-burger-menu'))
     if (!isProductSearch && !isMainMenu && !isBurgerMenuButton) {
         ShadowArea.hide()
-        return
     }
 })

@@ -7,19 +7,16 @@ const CURRENCY_DATA = {
     uzs: { flag: 'uzs', code: 'UZS' },
   }
   
-  class View extends HTMLElement {
+  class CurrencySelect extends HTMLElement {
     #value
     onSelectValue
     static observedAttributes = ['value'];
   
     constructor() {
       super();
-  
-      const template = document.getElementById('template-currency-select');
-      this.shadow = this.attachShadow({ mode: "open" });
-      this.shadow.appendChild(template.content.cloneNode(true));
-      this.dropdownEl = this.shadow.querySelector('[data-id=dropdown]')
-      this.selectItemEl = this.shadow.querySelector('[data-id=currency-select-item]')
+
+      this.dropdownEl = this.shadowRoot.querySelector('[data-id=dropdown]')
+      this.selectItemEl = this.shadowRoot.querySelector('[data-id=currency-select-item]')
   
       this.#initListeners()
     }
@@ -31,10 +28,10 @@ const CURRENCY_DATA = {
     }
 
     #markActive() {
-        this.shadow.querySelectorAll('[data-id=dropdown-item]').forEach(liEl => {
+        this.shadowRoot.querySelectorAll('[data-id=dropdown-item]').forEach(liEl => {
             liEl.removeAttribute('active')
         })
-        const activeEl = this.shadow.querySelector(`li[data-currency=${this.#value}]`)
+        const activeEl = this.shadowRoot.querySelector(`li[data-currency=${this.#value}]`)
         activeEl.setAttribute('active', '')
     }
   
@@ -79,4 +76,4 @@ const CURRENCY_DATA = {
     } 
   }
 
-customElements.define('currency-select', View)
+customElements.define('currency-select', CurrencySelect)

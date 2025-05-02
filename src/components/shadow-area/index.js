@@ -4,9 +4,6 @@ class View extends HTMLElement {
 
   constructor() {
     super();
-
-    const template = document.getElementById("template-shadow-area");
-    this.appendChild(template.content.cloneNode(true));
   }
 
   show () {

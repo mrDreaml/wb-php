@@ -1,11 +1,7 @@
-await customElements.whenDefined('main-menu')
-await customElements.whenDefined('animated-button-burger-menu')
-await customElements.whenDefined('shadow-area')
-
 const MainMenu = document.querySelector('main-menu')
-const BurgerMenuButton = document.querySelector('animated-button-burger-menu')
-const MainHeaderEl = document.querySelector('main-header header')
-const body = document.querySelector('body')
+const MainHeader = document.querySelector('main-header')
+const BurgerMenuButton = MainHeader.shadowRoot.querySelector('animated-button-burger-menu')
+const MainHeaderEl = MainHeader.shadowRoot.querySelector('header')
 const ShadowArea = document.querySelector('shadow-area')
 
 MainMenu.onCalcPosition = () => {
@@ -19,12 +15,12 @@ MainMenu.onCalcPosition = () => {
 const closeMenu = async () => {
     MainMenu.setAttribute('hidden', '')
     BurgerMenuButton.close()
-    body.classList.remove('no-scroll')
+    document.body.classList.remove('no-scroll')
 }
 
 BurgerMenuButton.onToggleBurgerMenu = (isOpened) => {
     if (isOpened) {
-        body.classList.add('no-scroll')
+        document.body.classList.add('no-scroll')
         MainMenu.removeAttribute('hidden')
         ShadowArea.show()
     } else {
@@ -34,8 +30,9 @@ BurgerMenuButton.onToggleBurgerMenu = (isOpened) => {
 }
 
 document.addEventListener('mousedown', e => {
-    const isMainMenu = Boolean(e.target.closest('main-menu'))
+    const isMainMenu = Boolean(e.target.closest('main-menu')) // TODO: use .composedPath()
     const isBurgerMenuButton = Boolean(e.target.closest('animated-button-burger-menu'))
+    console.log(e.target, e.composedPath())
     if (!isMainMenu && !isBurgerMenuButton && !MainMenu.hasAttribute('hidden')) {
         closeMenu()
     }

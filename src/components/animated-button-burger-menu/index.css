@@ -1,24 +1,24 @@
+:host([active]) {
+    .line {
+        &:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
 :host {
     width: 1em;
     height: 1em;
     font-size: 1em;
     display: flex;
-
-    &[active] {
-        .line {
-            &:nth-child(1) {
-                transform: rotate(45deg);
-            }
-
-            &:nth-child(2) {
-                opacity: 0;
-            }
-
-            &:nth-child(3) {
-                transform: rotate(-45deg);
-            }
-        }
-    }
 
     button {
         width: 100%;

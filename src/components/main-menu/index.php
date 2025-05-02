@@ -1,4 +1,6 @@
 <template shadowrootmode="open">
+    <link rel="stylesheet" href="/src/components/main-menu/index.css" />  
+
     <ul class="main-menu-content">
         <li class="menu__item menu__item__highlighted">
             <a data-id="menu-item" name="sale" class="menu__link" href="/promotions/">РАСПРОДАЖА</a>

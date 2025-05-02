@@ -1,15 +1,9 @@
-class View extends HTMLElement {
+class AnimatedButtonBurgerMenu extends HTMLElement {
   onToggleBurgerMenu
 
   constructor() {
     super();
-
-    const template = document.getElementById(
-      'template-animated-button-burger-menu'
-    );
-    this.appendChild(template.content.cloneNode(true));
-
-    this.querySelector('button').onclick = this.#handleClick.bind(this)
+    this.shadowRoot.querySelector('button').onclick = this.#handleClick.bind(this)
   }
 
   #handleClick () {
@@ -22,4 +16,4 @@ class View extends HTMLElement {
   }
 }
 
-customElements.define('animated-button-burger-menu', View)
+customElements.define('animated-button-burger-menu', AnimatedButtonBurgerMenu)

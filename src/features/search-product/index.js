@@ -2,10 +2,7 @@ import { getSearchProductSuggestions } from '/src/shared/services/api/index.js'
 
 const searchProductSuggestions = getSearchProductSuggestions()
 
-await customElements.whenDefined('product-search-input')
-await customElements.whenDefined('shadow-area')
-
-const ProductSearchInput = document.querySelector('product-search-input')
+const ProductSearchInput = document.querySelector('main-header').shadowRoot.querySelector('product-search-input')
 const ShadowArea = document.querySelector('shadow-area')
 
 ProductSearchInput.searchSuggestionsPromise = searchProductSuggestions

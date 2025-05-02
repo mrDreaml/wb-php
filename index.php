@@ -13,7 +13,9 @@
   <main-header>
     <?php include 'src/components/main-header/index.php' ?>
   </main-header>
-  <main-menu hidden></main-menu>
+  <main-menu hidden>
+    <?php include 'src/components/main-menu/index.php' ?>
+  </main-menu>
   <shadow-area></shadow-area>
   <main class="main-content">
     <promo-banner></promo-banner>
