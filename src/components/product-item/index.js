@@ -5,10 +5,6 @@ class View extends HTMLElement {
 
   constructor() {
     super();
-
-    const template = document.getElementById("template-product-item");
-    this.appendChild(template.content.cloneNode(true));
-
     this.#initListeners();
   }
 

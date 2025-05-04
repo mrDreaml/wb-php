@@ -30,10 +30,8 @@ BurgerMenuButton.onToggleBurgerMenu = (isOpened) => {
 }
 
 document.addEventListener('mousedown', e => {
-    const isMainMenu = Boolean(e.target.closest('main-menu')) // TODO: use .composedPath()
-    const isBurgerMenuButton = Boolean(e.target.closest('animated-button-burger-menu'))
-    console.log(e.target, e.composedPath())
-    if (!isMainMenu && !isBurgerMenuButton && !MainMenu.hasAttribute('hidden')) {
+    const composedPath = e.composedPath()
+    if (!MainMenu.hasAttribute('hidden') && !composedPath.some(el => ['ANIMATED-BUTTON-BURGER-MENU', 'MAIN_MENU'].includes(el.tagName))) {
         closeMenu()
     }
 })

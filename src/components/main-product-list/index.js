@@ -1,14 +1,10 @@
 import { defineElementOnContentLoaded } from "/src/shared/services/webComponents.js";
 
-class View extends HTMLElement {
+class MainProductList extends HTMLElement {
   static observedAttributes = [];
 
   constructor() {
     super();
-
-    const template = document.getElementById("template-main-product-list");
-    this.appendChild(template.content.cloneNode(true));
-
     this.#initListeners();
   }
 
@@ -34,4 +30,4 @@ class View extends HTMLElement {
 
 }
 
-defineElementOnContentLoaded("main-product-list", View);
+defineElementOnContentLoaded("main-product-list", MainProductList);

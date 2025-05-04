@@ -5,6 +5,7 @@ import './src/components/main-menu/index.js'
 import './src/components/product-item/index.js'
 import './src/components/product-search-input/index.js'
 import './src/components/shadow-area/index.js'
+import './src/components/base-slider/index.js'
 
 import './src/features/menu/index.js'
 import './src/features/search-product/index.js'

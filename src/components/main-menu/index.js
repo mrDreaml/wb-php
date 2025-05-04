@@ -6,7 +6,6 @@ class MainMenu extends HTMLElement {
 
   constructor() {
     super();
-    this.#initListeners();
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -38,10 +37,6 @@ class MainMenu extends HTMLElement {
     } else {
       this.#close()
     }
-  }
-
-  #initListeners() {
-
   }
 }
 

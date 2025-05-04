@@ -8,8 +8,8 @@ class View extends HTMLElement {
   constructor() {
     super();
     
-    this.#topBarEl = this.querySelector('[data-id=main-header-top]')
-    this.#mainHeaderEl = this.querySelector('[data-id=main-header]')
+    this.#topBarEl = this.shadowRoot.querySelector('[data-id=main-header-top]')
+    this.#mainHeaderEl = this.shadowRoot.querySelector('[data-id=main-header]')
 
     this.#initListeners()
   }

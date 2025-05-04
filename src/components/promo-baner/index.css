@@ -1,9 +1,10 @@
-promo-banner {
-    .promo-banner__slider {
+:host {
+    .promo-baner__slider {
         display: block;
         border-radius: 1em;
         overflow: hidden;
-
+        box-sizing: border-box;
+    
         .slide-item {
             border-radius: 1em;
             overflow: hidden;

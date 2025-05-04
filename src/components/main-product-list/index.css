@@ -1,4 +1,4 @@
-main-product-list {
+:host {
     display: grid;
     column-gap: 2em;
     row-gap: 2em;

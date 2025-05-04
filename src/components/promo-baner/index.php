@@ -1,39 +1,36 @@
 <template shadowrootmode="open">
-  <nav-slider class="promo-banner__slider" height="170" infinity gap="20">
-    <!-- <button slot="controls" class="navigation-slider__navigate__button__custom" name="navigation-prev">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-            <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
-          </svg>
-        </button>
-        <button slot="controls" class="navigation-slider__navigate__button__custom" name="navigation-next">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-          </svg>
-        </button> -->
-
+  <link rel="stylesheet" href="/src/components/promo-baner/index.css" />
+  <base-slider class="promo-baner__slider" height="170" infinity shrink="50" gap="10" autoplay>
+    <?php include 'src/components/base-slider/index.php' ?>
     <slider-item class="slide-item">
+      <?php include 'src/components/slider-item/index.php' ?>
       <img src="/src/shared/assets/banners/2880x336_1.webp" alt="" />
     </slider-item>
 
     <slider-item class="slide-item">
+      <?php include 'src/components/slider-item/index.php' ?>
       <img src="/src/shared/assets/banners/spring_2880.webp" alt="" />
     </slider-item>
 
     <slider-item class="slide-item">
+      <?php include 'src/components/slider-item/index.php' ?>
       <img src="/src/shared/assets/banners/remont_2880.webp" alt="" />
     </slider-item>
 
     <slider-item class="slide-item">
+      <?php include 'src/components/slider-item/index.php' ?>
       <img src="/src/shared/assets/banners/local_storage_by_2880.webp" alt="" />
     </slider-item>
 
     <slider-item class="slide-item">
+      <?php include 'src/components/slider-item/index.php' ?>
       <img src="/src/shared/assets/banners/minsk-dost_2880.webp" alt="" />
     </slider-item>
 
     <slider-item class="slide-item">
+      <?php include 'src/components/slider-item/index.php' ?>
       <img src="/src/shared/assets/banners/2880dacha1104.webp" alt="" />
     </slider-item>
 
-  </nav-slider>
+  </base-slider>
 </template>

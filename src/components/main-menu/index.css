@@ -1,21 +1,21 @@
+:host(.show-menu-transition) {
+    .main-menu-content {
+        animation: showMainMenu .3s ease-in-out forwards;
+    }
+}
+
+:host(.hide-menu-transition) {
+    .main-menu-content {
+        animation: hideMainMenu .3s ease-in-out forwards;
+    }
+}
+
 :host {
     position: fixed;
     left: 0;
     height: 100%;
     display: none;
     z-index: 1000;
-
-    &.show-menu-transition {
-        .main-menu-content {
-            animation: showMainMenu .3s ease-in-out forwards;
-        }
-    }
-
-    &.hide-menu-transition {
-        .main-menu-content {
-            animation: hideMainMenu .3s ease-in-out forwards;
-        }
-    }
   
     .main-menu-content {
         display: flex;

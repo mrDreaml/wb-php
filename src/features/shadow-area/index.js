@@ -1,10 +1,17 @@
-const ShadowArea = document.querySelector('shadow-area')
+const ShadowArea = document.querySelector("shadow-area");
 
-document.addEventListener('mousedown', e => {
-    const isProductSearch = Boolean(e.target.closest('product-search-input'))
-    const isMainMenu = Boolean(e.target.closest('main-menu'))
-    const isBurgerMenuButton = Boolean(e.target.closest('animated-button-burger-menu'))
-    if (!isProductSearch && !isMainMenu && !isBurgerMenuButton) {
-        ShadowArea.hide()
-    }
-})
+const NO_NEED_NEED_COMPONENTS = [
+  "ANIMATED-BUTTON-BURGER-MENU",
+  "MAIN_MENU",
+  "PRODUCT-SEARCH-INPUT",
+];
+
+document.addEventListener("mousedown", (e) => {
+  const composedPath = e.composedPath();
+
+  if (
+    !composedPath.some((el) => NO_NEED_NEED_COMPONENTS.includes(el.tagName))
+  ) {
+    ShadowArea.hide();
+  }
+});

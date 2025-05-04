@@ -22,9 +22,9 @@ ProductSearchInput.onHideDropdown = async () => {
 }
 
 document.addEventListener('mousedown', e => {
-    const isProductSearch = Boolean(e.target.closest('product-search-input'))
+    const composedPath = e.composedPath()
 
-    if (!isProductSearch && ProductSearchInput.checkDropdownOpened()) {
+    if (ProductSearchInput.checkDropdownOpened() && !composedPath.some(el => el.tagName === 'PRODUCT-SEARCH-INPUT')) {
         ProductSearchInput.hideDropdown()
     }
 })

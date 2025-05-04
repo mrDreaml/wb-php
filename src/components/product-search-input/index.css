@@ -126,7 +126,6 @@
     flex-direction: column;
 
     padding: .8em 0;
-    overflow: hidden;
     background-color: #fff;
     border-radius: 1em;
     box-shadow: 0 0 1em rgba(0, 0, 0, .05);

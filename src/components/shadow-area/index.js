@@ -1,4 +1,4 @@
-class View extends HTMLElement {
+class ShadowArea extends HTMLElement {
   static observedAttributes = ['hidden'];
   #transitionTimer
 
@@ -20,4 +20,4 @@ class View extends HTMLElement {
   }
 }
 
-customElements.define("shadow-area", View);
+customElements.define("shadow-area", ShadowArea);

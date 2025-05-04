@@ -4,7 +4,7 @@ const checkIsTouchEnabled = () => ('ontouchstart' in window) ||
          (navigator.maxTouchPoints > 0) || 
          (navigator.msMaxTouchPoints > 0);
 
-class View extends HTMLElement {
+class BaseSlider extends HTMLElement {
   static observedAttributes = [
     "width",
     "height",
@@ -128,12 +128,16 @@ class View extends HTMLElement {
 
     parentNode.prepend(newFirstChild);
     parentNode.append(newLastChild);
+    setTimeout(() => {
+      this.#navigateToSlide(0, "instant");
+    })
   }
 
   #setupInitialSize() {
     if (this.#width && this.height) return;
 
-    const { width, height } = this.parentNode.getBoundingClientRect();
+    const width = this.clientWidth
+    const height = this.clientHeight
 
     if (!this.#width) {
       this.#setWidth(width, false);
@@ -213,7 +217,7 @@ class View extends HTMLElement {
       index = index + 1;
     }
 
-    const scrollLeft = index * this.#getCalculatedWidth() - this.#shrink
+    const scrollLeft = index * this.#getCalculatedWidth() + index * this.#gap + this.#shrink * index * 2
     this.slidesWrapper.scrollTo({
       top: 0,
       left: scrollLeft,
@@ -274,7 +278,7 @@ class View extends HTMLElement {
   }
 
   #handleEdgesInfinityScroll(actualIndex) {
-    if (actualIndex >= this.#initialSlidesCount) {
+    if (actualIndex > this.#initialSlidesCount || (!this.#shrink && actualIndex === this.#initialSlidesCount)) {
       this.value = 0;
       this.#navigateToSlide(this.value, "instant");
       this.#dispatchChangeSlideEvent(this.value);
@@ -386,19 +390,18 @@ class View extends HTMLElement {
     this.#shrink = value ? +value : 0
 
     if (value) {
-      this.style.padding = `0 ${value}px`
+      this.slidesWrapper.style.padding = `0 ${value}px`
     } else {
-      this.style.padding = ''
+      this.slidesWrapper.style.padding = ''
     }
   }
 
   #setGap(value) {
-    this.#gap = value ? +value : 0
-
     if (value) {
-      this.style.gap = `${value}px`
+      this.#gap = +value
+      this.slidesWrapper.style.gap = `${value}px`
     }
   }
 }
 
-defineElementOnContentLoaded('base-slider', View)
+defineElementOnContentLoaded('base-slider', BaseSlider)
