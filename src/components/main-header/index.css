@@ -1,3 +1,8 @@
+.reserved {
+    height: 113px;
+    width: 100%;
+}
+
 .main-header {
     width: 100%;
     background: linear-gradient(97.26deg, #ed3cca .49%, #df34d2 14.88%, #d02bd9 29.27%, #bf22e1 43.14%, #ae1ae8 57.02%, #9a10f0 70.89%, #8306f7 84.76%, #7c1af8 99.15%), linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .05));
@@ -18,6 +23,7 @@
     }
 
     &.main-header__fixed {
+        top: 0;
         position: fixed;
         padding-top: 1em;
     }

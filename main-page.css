@@ -11,6 +11,13 @@ body {
         max-height: 100%;
         overflow: hidden;
     }
+
+    --default-color: #000;
+    --gray-color: #868695;
+    --gray-color-2: #9d9da5;
+    --red: #f44;
+    --primary: #a73afd;
+    --primary-2: #a73afde6;
 }
 
 html::view-transition {
@@ -25,4 +32,12 @@ html::view-transition {
     padding: 1.5em;
     max-width: 1440px;
     place-self: center;
+}
+
+.main-shadow-area {
+    z-index: 1000;
+}
+
+.main-menu  {
+    z-index: 1001;
 }

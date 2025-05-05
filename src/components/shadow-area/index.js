@@ -8,11 +8,13 @@ class ShadowArea extends HTMLElement {
 
   show () {
     this.style.display = 'block'
-    this.className = 'shadow-area__show'
+    this.classList.remove('shadow-area__hide')
+    this.classList.add('shadow-area__show')
   }
 
   hide () {
-    this.className = 'shadow-area__hide'
+    this.classList.remove('shadow-area__show')
+    this.classList.add('shadow-area__hide')
     clearTimeout(this.#transitionTimer)
     this.#transitionTimer = setTimeout(() => {
        this.style.display = 'none'

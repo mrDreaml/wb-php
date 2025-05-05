@@ -1,0 +1,39 @@
+:host([loading])::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(
+    to right,
+    var(--skeleton-backgropund),
+    var(--skeleton-backgropund) 25%,
+    var(--skeleton-backgropund) calc(25% + 1px),
+    var(--skeleton-backgropund),
+    #fafafa,
+    #f5f5f5 40%,
+    var(--skeleton-backgropund) calc(40% + 1px)
+    );
+    animation: product-item-shimmer 1.4s ease-in-out infinite;
+}
+
+:host {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 2;
+    --skeleton-backgropund: #f3f3f3;
+    background-color: var(--skeleton-backgropund);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+@keyframes product-item-shimmer {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(75%, 0, 0);
+    }
+  }

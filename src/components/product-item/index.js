@@ -1,6 +1,4 @@
-import { defineElementOnContentLoaded } from "/src/shared/services/webComponents.js";
-
-class View extends HTMLElement {
+class ProductItem extends HTMLElement {
   static observedAttributes = [];
 
   constructor() {
@@ -9,19 +7,18 @@ class View extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log("Custom element added to page.");
+
   }
 
   disconnectedCallback() {
-    console.log("Custom element removed from page.");
-  }
-
-  adoptedCallback() {
-    console.log("Custom element moved to new page.");
+    
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log(`Attribute \${name} has changed.`);
+  }
+
+  #renderData () {
+
   }
 
   #initListeners() {
@@ -29,4 +26,4 @@ class View extends HTMLElement {
   }
 }
 
-defineElementOnContentLoaded("product-item", View);
+customElements.define("product-item", ProductItem);

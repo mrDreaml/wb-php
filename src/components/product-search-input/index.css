@@ -17,7 +17,7 @@
 .product-search__input {
     width: 100%;
     border: none;
-    caret-color: #a73afd;
+    caret-color: var(--primary);
     line-height: 1.5em;
     font-size: 1.1em;
     padding: .95em 0 .95em 1em;
@@ -55,7 +55,7 @@
     margin: auto 1em;
 
     &:hover {
-        background-color: #a73afd;
+        background-color: var(--primary);
     }
 
     &:not([hidden]) {
@@ -108,7 +108,7 @@
         mask-position: 50%;
         mask-repeat: no-repeat;
         mask-size: 50%;
-        background-color: #a73afd;
+        background-color: var(--primary);
         width: 2.5em;
         height: 2.5em;
         top: 0;

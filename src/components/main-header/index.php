@@ -1,6 +1,8 @@
 <template shadowrootmode="open">
     <link rel="stylesheet" href="/src/components/main-header/index.css" />
 
+    <div hidden data-id="reserved" class="reserved"></div>
+
     <header data-id="main-header" class="main-header">
         <div class="main-header__container">
             <div data-id="main-header-top" class="main-header__top">

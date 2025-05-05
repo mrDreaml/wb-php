@@ -10,12 +10,14 @@ class View extends HTMLElement {
     
     this.#topBarEl = this.shadowRoot.querySelector('[data-id=main-header-top]')
     this.#mainHeaderEl = this.shadowRoot.querySelector('[data-id=main-header]')
+    this.reserved = this.shadowRoot.querySelector('[data-id=reserved]')
 
     this.#initListeners()
   }
 
   #switchToFixedMode () {
     this.style.marginBottom = `${this.#mainHeaderEl.clientHeight - 3}px`
+    this.reserved.removeAttribute('hidden')
     this.#topBarEl.setAttribute('hidden', '')
     this.#mainHeaderEl.classList.add('main-header__fixed')
     this.#isFixedMode = true
@@ -23,6 +25,7 @@ class View extends HTMLElement {
 
   #switchToDefaultMode () {
     this.style.marginBottom = 0
+    this.reserved.setAttribute('hidden', '')
     this.#topBarEl.removeAttribute('hidden')
     this.#mainHeaderEl.classList.remove('main-header__fixed')
     this.#isFixedMode = false
@@ -37,8 +40,6 @@ class View extends HTMLElement {
   }
 
   #initListeners () {
-    this.addEventListener('toggle-burger-menu', e => console.log('???', e))
-
     document.onscroll = this.#handleScroll.bind(this)
   } 
 }
