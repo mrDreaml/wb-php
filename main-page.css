@@ -18,6 +18,7 @@ body {
     --red: #f44;
     --primary: #a73afd;
     --primary-2: #a73afde6;
+    --white-transparent: #ffffffee;
 }
 
 html::view-transition {
