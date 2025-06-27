@@ -57,8 +57,14 @@
   position: relative;
   box-sizing: border-box;
 
-  &:hover .card__preview-wrapper {
-    opacity: 1;
+  &:hover {
+    .card__preview-wrapper {
+      display: block;
+    }
+
+    .card__tags-wrapper {
+      display: none;
+    }
   }
 
   img {
@@ -189,7 +195,7 @@
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
-  opacity: 0;
+  display: none;
   
   .card__preview {
     margin: .5em;
@@ -214,5 +220,46 @@
 
   &:hover {
     background-image: url('/src/shared/assets/icons/likeHovered.svg');
+  }
+}
+
+.card__tags-wrapper {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: .5em;
+
+  .card__tag {
+    display: flex;
+    align-items: center;
+    border-radius: .5em;
+    color: #fff;
+    padding: .1em .25em;
+    font-weight: bold;
+    font-size: .9em;
+    margin-top: .5em;
+  }
+
+  .card__tag__discont {
+    background-color: var(--red);
+  }
+
+  .card__tag__good-price {
+    background-color: var(--primary);
+    &::before {
+      content: '';
+      display: block;
+      width: 1em;
+      height: 1em;
+      background-image: url('/src/shared/assets/icons/goodPrice.svg');
+      margin-right: .25em;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .card__tag__sale {
+    background-color: #FC8816;
   }
 }

@@ -1,5 +1,10 @@
 [
     {
+        "tags": [
+            { "type": "discont", "value": -12 },
+            { "type": "goodPrice", "value": true },
+            { "type": "sale", "value": true }
+        ],
         "images": [
             "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/1.webp",
             "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/2.webp",
@@ -9,6 +14,93 @@
         "title": "Ботинки дерби классические",
         "price": 121.83,
         "old_price": 150.20,
+        "brand": "Instreet",
+        "brand_verified": true,
+        "category": "Ботинки дерби классические",
+        "rating": 4.8,
+        "reviews_count": 24956,
+        "url": "/product/123",
+        "delivery_date": "Завтра"
+    },
+    {
+        "tags": [
+            { "type": "discont", "value": -3 },
+            { "type": "goodPrice", "value": true },
+            { "type": "sale", "value": false }
+        ],
+        "images": [
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/1.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/2.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/3.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/4.webp"
+        ],
+        "title": "Ботинки дерби классические",
+        "price": 121.83,
+        "old_price": 150.20,
+        "brand": "Instreet",
+        "brand_verified": true,
+        "category": "Ботинки дерби классические",
+        "rating": 4.8,
+        "reviews_count": 24956,
+        "url": "/product/123",
+        "delivery_date": "Завтра"
+    },
+    {
+        "tags": [
+            { "type": "discont", "value": -15 },
+            { "type": "goodPrice", "value": false },
+            { "type": "sale", "value": false }
+        ],
+        "images": [
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/1.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/2.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/3.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/4.webp"
+        ],
+        "title": "Ботинки дерби классические",
+        "price": 121.83,
+        "old_price": 150.20,
+        "brand": "Instreet",
+        "brand_verified": true,
+        "category": "Ботинки дерби классические",
+        "rating": 4.8,
+        "reviews_count": 24956,
+        "url": "/product/123",
+        "delivery_date": "Завтра"
+    },
+    {
+        "tags": [
+            { "type": "goodPrice", "value": false },
+            { "type": "sale", "value": true }
+        ],
+        "images": [
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/1.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/2.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/3.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/4.webp"
+        ],
+        "title": "Ботинки дерби классические",
+        "price": 121.83,
+        "old_price": 150.20,
+        "brand": "Instreet",
+        "brand_verified": true,
+        "category": "Ботинки дерби классические",
+        "rating": 4.8,
+        "reviews_count": 24956,
+        "url": "/product/123",
+        "delivery_date": "Завтра"
+    },
+    {
+        "tags": [],
+        "images": [
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/1.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/2.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/3.webp",
+            "https://basket-16.wbbasket.ru/vol2509/part250902/250902624/images/c516x688/4.webp"
+        ],
+        "title": "Ботинки дерби классические",
+        "price": 121.83,
+        "red-price": true,
         "brand": "Instreet",
         "brand_verified": true,
         "category": "Ботинки дерби классические",

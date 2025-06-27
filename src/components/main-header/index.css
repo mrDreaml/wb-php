@@ -10,11 +10,11 @@
     z-index: 1000;
 
     product-search-input {
-        z-index: 1000;
+        z-index: 3000;
     }
-    
+
     currency-select {
-        z-index: 1001;
+        z-index: 3001;
     }
 
     animated-button-burger-menu {
@@ -39,11 +39,11 @@
 .main-header__top {
     justify-content: space-between;
     margin-bottom: .2em;
-    
+
     &:not([hidden]) {
         display: flex;
-      }
-  
+    }
+
 }
 
 .main-header__top-navigation {
@@ -108,6 +108,7 @@
 
 .main-header__location {
     display: flex;
+
     a {
         padding: .25em .5em;
         border-radius: .5em;
